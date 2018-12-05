@@ -4,10 +4,9 @@ import ru.job4j.chess.firuges.Cell;
 import ru.job4j.chess.firuges.Figure;
 
 /**
- *
- * @author Petr Arsentev (parsentev@yandex.ru)
- * @version $Id$
- * @since 0.1
+ * @author Sergey Baikov
+ * @version $ 1 $
+ * @since 04.12.18
  */
 public class KnightBlack implements Figure {
     private final Cell position;
@@ -23,7 +22,18 @@ public class KnightBlack implements Figure {
 
     @Override
     public Cell[] way(Cell source, Cell dest) {
-        return new Cell[] { dest };
+        Cell[] steps = new Cell[0];
+        if (source.y == dest.y + 2 && source.x == dest.x + 1 ||
+                source.y == dest.y + 2 && source.x == dest.x - 1 ||
+                source.y == dest.y - 2 && source.x == dest.x + 1 ||
+                source.y == dest.y - 2 && source.x == dest.x - 1 ||
+                source.y == dest.y + 1 && source.x == dest.x + 2 ||
+                source.y == dest.y + 1 && source.x == dest.x - 2 ||
+                source.y == dest.y - 1 && source.x == dest.x + 2 ||
+                source.y == dest.y - 1 && source.x == dest.x - 2) {
+            steps = new Cell[] { dest };
+        }
+        return steps;
     }
 
     @Override

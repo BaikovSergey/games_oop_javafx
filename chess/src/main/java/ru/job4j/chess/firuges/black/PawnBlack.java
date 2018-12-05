@@ -4,10 +4,9 @@ import ru.job4j.chess.firuges.Cell;
 import ru.job4j.chess.firuges.Figure;
 
 /**
- *
- * @author Petr Arsentev (parsentev@yandex.ru)
- * @version $Id$
- * @since 0.1
+ * @author Sergey Baikov
+ * @version $ 1 $
+ * @since 04.12.18
  */
 public class PawnBlack implements Figure {
     private final Cell position;
