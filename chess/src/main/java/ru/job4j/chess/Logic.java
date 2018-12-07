@@ -3,14 +3,10 @@ package ru.job4j.chess;
 import ru.job4j.chess.firuges.Cell;
 import ru.job4j.chess.firuges.Figure;
 
-import java.util.Optional;
-
 /**
- * //TODO add comments.
- *
- * @author Petr Arsentev (parsentev@yandex.ru)
- * @version $Id$
- * @since 0.1
+ * @author Sergey Baikov
+ * @version $ 1 $
+ * @since 04.12.18
  */
 public class Logic {
     private final Figure[] figures = new Figure[32];
@@ -20,7 +16,7 @@ public class Logic {
         this.figures[this.index++] = figure;
     }
 
-    public boolean move(Cell source, Cell dest) {
+    public boolean move(Cell source, Cell dest) throws ImpossibleMoveException, OccupiedWayException, FigureNotFoundException {
         boolean rst = false;
         int index = this.findBy(source);
         if (index != -1) {

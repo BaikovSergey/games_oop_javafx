@@ -23,7 +23,7 @@ public class KingBlack implements Figure {
 
     @Override
     public Cell[] way(Cell source, Cell dest) {
-        Cell[] steps = new Cell[0];
+        Cell[] steps = new Cell[1];
         if (source.y == dest.y + 1 && source.x == dest.x ||
                 source.y == dest.y - 1 && source.x == dest.x ||
                 source.y == dest.y && source.x == dest.x - 1 ||

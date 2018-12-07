@@ -22,7 +22,7 @@ public class KnightBlack implements Figure {
 
     @Override
     public Cell[] way(Cell source, Cell dest) {
-        Cell[] steps = new Cell[0];
+        Cell[] steps = new Cell[4];
         if (source.y == dest.y + 2 && source.x == dest.x + 1 ||
                 source.y == dest.y + 2 && source.x == dest.x - 1 ||
                 source.y == dest.y - 2 && source.x == dest.x + 1 ||
